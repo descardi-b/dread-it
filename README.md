@@ -1,5 +1,5 @@
 # vigilant-palm-tree
-UC Berkeley Full Stack Development Project Three
+UC Berkeley Full Stack Development Project Three: Dreadit.
 
 ## What it is
 A full-stack app for horror-genre lovers and ghouls to interact about anything and everything. 
@@ -17,5 +17,8 @@ Create a server directory. In the server folder, run:
 So, there'll be a total of 3 package.json files.
 
 ## What it looks like
+Deployed app link:
+Screenshots:
 
 ## Collaborators
+Alexandra Holden (@ https://github.com/descardi-b), Aaron H. Leung (@ https://github.com/aaronhleung), Winnie C. Wu (@ https://github.com/WinnieCWu), & Sandy Chen (@ https://github.com/sandycchen).
