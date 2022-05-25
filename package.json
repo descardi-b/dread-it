@@ -1,0 +1,20 @@
+{
+  "name": "dread-it",
+  "version": "1.0.0",
+  "description": "UC Berkeley Full Stack Development Project Three",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/descardi-b/dread-it.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/descardi-b/dread-it/issues"
+  },
+  "homepage": "https://github.com/descardi-b/dread-it#readme"
+}
