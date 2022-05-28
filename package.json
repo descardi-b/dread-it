@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/descardi-b/dread-it/issues"
   },
-  "homepage": "https://github.com/descardi-b/dread-it#readme"
+  "homepage": "https://github.com/descardi-b/dread-it#readme",
+  "dependencies": {
+    "concurrently": "^7.2.1"
+  }
 }
