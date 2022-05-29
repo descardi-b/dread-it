@@ -8,12 +8,15 @@ A full-stack app for horror-genre lovers and ghouls to interact about anything a
 MERN Stack
 
 Note to developers:
-For app to function, must 1st run 'npx create-react-app client' to create 'client' folder
+For app to function, must 1st run 'npx create-react-app client' to create 'client' folder. In the client folder, also run 'npm i jwt-decode', 'npm i --save react-router-dom', & 'npm i @apollo/client graphql'.
+
 Then in the root, run 'npm init -y' to create a package.json 
 Also in the root, run 'npm i concurrently --save-dev' to allow both client and server directory to run simultaneously
+
 Create a server directory. In the server folder, run:
 'npm init -y' to create a package.json file
 'npm i graphql express apollo-server-express mongoose'
+
 So, there'll be a total of 3 package.json files.
 
 ## What it looks like
