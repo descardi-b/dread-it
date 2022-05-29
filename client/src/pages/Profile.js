@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect, useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import ThoughtList from '../components/ThoughtList';
 import ThoughtForm from '../components/ThoughtForm';
 import { useQuery, useMutation } from '@apollo/react-hooks';
@@ -21,7 +21,7 @@ const Profile = () => {
 
   // redirect to personal profile page if username is the logged-in user's
   if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
-    return <Redirect to='/profile' />;
+    return <Navigate to='/profile' />;
   }
 
   if (loading) {
