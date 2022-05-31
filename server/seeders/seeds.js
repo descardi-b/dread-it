@@ -1,18 +1,29 @@
 const userSeeds = require('./userSeed.json');
-const thoughtSeeds = require('./thoughtSeed.js');
+const thoughtSeeds = require('./thoughtSeed.json');
+// import ThoughtSeed from "./thoughtSeed";
+// import UserSeed from "./userSeed";
+
 const db = require('../config/connection');
 const { Thought, User } = require('../models');
 
+
+// //mapping array of objects
+// {ThoughtSeed.thoughtSeed.map((item,i) => (
+//     <tr key={i}>
+//         <td> {item.username}</td>
+//         <td> {item.thoughts}</td>
+//     </tr>
+// ))}
 
 db.once('open', async() => {
     try {
         await Thought.deleteMany({});
         await User.deleteMany({});
 
-        await User.create(userSeeds);
+        await User.create(UserSeed);
 
-        for (let i = 0; i < thoughtSeeds.length; i++) {
-            const { _id: thoughtAuthor } = await Thought.create(thoughtSeeds[i]);
+        for (let i = 0; i < thoughtSeed.length; i++) {
+            const { _id: thoughtAuthor } = await Thought.create(thoughtSeed[i]);
             const user = await User.findOneAndUpdate(
                 { username: thoughtAuthor },
                 {
@@ -30,3 +41,5 @@ db.once('open', async() => {
     console.log('all seeds loaded!');
     process.exit(0);
 });
+
+export default Seeds;

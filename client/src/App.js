@@ -16,7 +16,7 @@ import NoMatch from "./pages/NoMatch";
 import Profile from "./pages/Profile";
 import Signup from "./pages/Signup";
 import SingleThought from "./pages/SingleThought";
-import 'bootstrap/dist/css/bootstrap.css'; 
+// import 'bootstrap/dist/css/bootstrap.css'; 
 
 const httpLink = createHttpLink({
   uri: '/graphql',

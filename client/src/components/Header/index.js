@@ -12,22 +12,22 @@ const Header = () => {
     <header className="bg-secondary mb-4 py-2 flex-row align-center">
       <div className="container flex-row justify-space-between-lg justify-center align-center">
         <Link to="/">
-          <h1>dreadit.</h1>
+          <h1 className="red">dread-it.</h1>
         </Link>
 
-        <nav className="text-center">
+        <main className="text-center">
           {Auth.loggedIn() ? (
             <>
               <Link to="/profile">Me</Link>
-              <a href="/" onClick={logout} >logout</a>
+              <a href="/" onClick={logout}>logout</a>
             </>
           ) : (
             <>
-              <Link to="/login">login</Link>
-              <Link to="/signup">signup</Link>
+              <Link to="/login" className="white">login </Link>
+              <Link to="/signup" className="white">signup </Link>
             </>
           )}
-        </nav>
+        </main> 
       </div>
     </header>
   );
