@@ -10,6 +10,28 @@ body {
   background: grey;
 }
 
+.btn {
+  font-size: 1.3rem;
+  text-decoration: none;
+  padding: 0.5rem 0.5rem;
+  margin: 5px 0;
+  border: none;
+  color: var(--dark);
+  outline: none;
+  transition: all 0.5s;
+  text-align: center;
+}
+
+.btn:hover{
+  background-color: var(--dark);
+  text-align: center;
+}
+
+.btn-inline {
+  display: inline;
+  text-align: center;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Celadine', 'Courier New',
     monospace;
@@ -40,7 +62,29 @@ code {
   width: 92%;
 }
 
-DISPLAY
+* FORM */
+.form-label,
+.form-input,
+.form-textarea {
+  display: block;
+}
+
+.form-label {
+  font-size: 1.2rem;
+  margin: 0.625rem 0 0.25rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.2rem 0;
+  font-size: 1.2rem;
+  border: 2px solid var(--dark);
+  border-radius: var(--border-radius);
+}
+
+
+/* DISPLAY */
 
 .display-block {
   display: block;
@@ -85,6 +129,11 @@ DISPLAY
 .mb-0 {
   margin-bottom: 0;
 }
+
+.mb-2 {
+  margin-bottom: calc(1rem * 0.5);
+}
+
 
 .mb-auto {
   margin-bottom: auto;
