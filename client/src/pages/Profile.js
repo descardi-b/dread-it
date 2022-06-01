@@ -8,7 +8,7 @@ import FriendList from '../components/FriendList';
 import Auth from '../utils/auth';
 import { ADD_FRIEND } from '../utils/mutations';
 
-const Profile = () => {
+const Profile = (props) => {
   const { username: userParam } = useParams();
 
   const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
@@ -54,7 +54,7 @@ const Profile = () => {
         </h2>
         {userParam && (
           <button className='btn ml-auto' onClick={handleClick}>
-            Add Friend
+            Add Ghoul
           </button>
         )}
       </div>

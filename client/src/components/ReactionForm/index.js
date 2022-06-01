@@ -7,24 +7,26 @@ const ReactionForm = ({ thoughtId }) => {
     const [characterCount, setCharacterCount] = useState(0);
     const [addReaction, { error }] = useMutation(ADD_REACTION);
 
-    const handleChange = event => {
+    const handleChange = (event) => {
       if (event.target.value.length <= 280) {
         setBody(event.target.value);
         setCharacterCount(event.target.value.length);
       }
     };
     
-    const handleFormSubmit = async event => {
+    const handleFormSubmit = async (event) => {
       event.preventDefault();
       try {
         await addReaction({
             variables: {reactionBody, thoughtId}
-        })
+        });
+         // clear form value
+        setBody('');
+        setCharacterCount(0);
       } catch (e) {
           console.error(e)
       }
-      setBody('');
-      setCharacterCount(0);
+      
     };
 
     return (
@@ -38,7 +40,7 @@ const ReactionForm = ({ thoughtId }) => {
         onSubmit={handleFormSubmit}
       >
         <textarea
-          placeholder="Leave a spooky reaction to this thought..."
+          placeholder="Add a scream to this screech..."
           value={reactionBody}
           className="form-input col-12 col-md-9"
           onChange={handleChange}
@@ -48,6 +50,7 @@ const ReactionForm = ({ thoughtId }) => {
           Submit
         </button>
       </form>
+      {error && <div>Something went wrong...</div>}
     </div>
   );
 };

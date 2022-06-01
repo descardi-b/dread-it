@@ -1,27 +1,32 @@
 {
   "name": "dread-it",
   "version": "1.0.0",
-  "description": "UC Berkeley Full Stack Development Project Three",
-  "main": "index.js",
+  "description": "UC Berkeley Full Stack Development Project Three: MERN (MongoDB, Express.js, React, and Node.js) stack social network",
+  "main": "server/server.js",
   "scripts": {
-    "start": "node server/server.js",
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "cd server && npm start",
+    "start:dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "install": "cd server && npm i && cd ../client && npm i",
     "seed": "cd server && npm run seed",
-    "build": "cd client && npm run build"
+    "heroku-postbuild": "cd client && npm run build && cd ../server && npm run seed"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/descardi-b/dread-it.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "team dreadit",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/descardi-b/dread-it/issues"
   },
   "homepage": "https://github.com/descardi-b/dread-it#readme",
+  "dependencies": {
+    "if-env": "^1.0.4"
+  },
   "devDependencies": {
-    "concurrently": "^7.2.1"
+    "concurrently": "^5.3.0"
   }
 }
